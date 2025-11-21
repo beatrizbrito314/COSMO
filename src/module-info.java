@@ -1,5 +1,5 @@
 module COSMO {
-	exports database;
+	exports service;
 	exports view;
 	exports application;
 	exports model;
@@ -7,4 +7,7 @@ module COSMO {
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.graphics;
+    requires javafx.fxml;
+	requires com.google.gson;
+
 }
