@@ -12,14 +12,14 @@ public class Main extends javafx.application.Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        changeScene("/view/Landing.fxml"); // caminho do FXML no resources
+        changeScene("/view/Landing.fxml"); 
         stage.setTitle("Cosmo");
         stage.show();
     }
 
     public static void changeScene(String fxml) {
         try {
-            // Carrega o FXML
+            
             FXMLLoader loader = new FXMLLoader(Main.class.getResource(fxml));
 
             if (loader.getLocation() == null) {
@@ -29,7 +29,6 @@ public class Main extends javafx.application.Application {
 
             Scene scene = new Scene(loader.load());
 
-            // 🔥 CARREGAR O CSS DA PASTA /style
             String css = Main.class.getResource("/style/estilos.css").toExternalForm();
             scene.getStylesheets().add(css);
 
@@ -49,4 +48,3 @@ public class Main extends javafx.application.Application {
         return stage;
     }
 }
-
