@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.ContatoController">
+
+    <top>
+        <fx:include source="Navbar.fxml" />
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-fundo">
+            <VBox alignment="TOP_CENTER" spacing="40">
+
+                <padding>
+                    <Insets top="50" right="40" bottom="50" left="40"/>
+                </padding>
+
+                <VBox alignment="CENTER" spacing="20" prefWidth="750" styleClass="card-galaxy">
+                    <Label text="📡 Entre em Contato" styleClass="titulo-galaxy"/>
+                    <Label text="Fale com nossa equipe! Estamos sempre abertos a sugestões, dúvidas e ideias."
+                           wrapText="true" styleClass="texto-desc"/>
+                </VBox>
+
+                <VBox alignment="TOP_CENTER" spacing="20" prefWidth="750" styleClass="card-galaxy">
+                    <Label text="🌐 Formas de Contato" styleClass="titulo-galaxy"/>
+
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label text="📧 Email:" styleClass="texto-secundario"/>
+                        <Label text="counicacao@cosmo.com" styleClass="link"/>
+                    </HBox>
+
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label text="📱 Telefone:" styleClass="texto-secundario"/>
+                        <Label text="(84) 4002-8922" styleClass="link"/>
+                    </HBox>
+
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label text="📸 Instagram:" styleClass="texto-secundario"/>
+                        <Label text="explore.cosmo" styleClass="link"/>
+                    </HBox>
+
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label text="🌍 Site:" styleClass="texto-secundario"/>
+                        <Label text="www.cosmo.com" styleClass="link"/>
+                    </HBox>
+
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

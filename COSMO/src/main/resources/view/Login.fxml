@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.LoginController"
+            prefWidth="900" prefHeight="600">
+
+    <top>
+        <fx:include source="Navbar.fxml" />
+    </top>
+
+    <center>
+        <StackPane styleClass="fundo-uni">
+
+            <HBox alignment="CENTER"
+                  spacing="0"
+                  prefWidth="750" prefHeight="420"
+                  styleClass="card-grande">
+
+                <StackPane prefWidth="360" prefHeight="420" styleClass="card-foto" HBox.hgrow="NEVER">
+                    <ImageView fx:id="leftImage"
+                               fitWidth="360"
+                               fitHeight="420"
+                               preserveRatio="true">
+                        <image>
+                            <Image url="@/images/login.png" /> 
+                        </image>
+                    </ImageView>
+                </StackPane>
+
+                <VBox alignment="CENTER" spacing="12" prefWidth="390" styleClass="card-form" HBox.hgrow="NEVER">
+                    <Label text="Acesse seu universo" styleClass="titulo-form"/>
+                    <TextField fx:id="usuario" promptText="Usuário" styleClass="campo-input"/>
+                    <PasswordField fx:id="senha" promptText="Senha" styleClass="campo-senha"/>
+                    <Button text="Entrar" styleClass="botao-roxo" onAction="#doLogin"/>
+                    <HBox alignment="CENTER" spacing="8">
+                        <Label text="Ainda não tem conta?" styleClass="texto-redirec"/>
+                        <Label text="Criar conta" styleClass="link" onMouseClicked="#goToRegister"/>
+                    </HBox>
+                </VBox>
+
+            </HBox>
+
+        </StackPane>
+    </center>
+</BorderPane>

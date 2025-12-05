@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.HomeController"
+            stylesheets="@../style/estilos.css">
+
+    <!-- Top bar -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="topbar">
+            <children>
+                <Label text="Universo" styleClass="brand" />
+
+                <Button text="Meu universo" onAction="#openDisciplina" />
+                <Button text="Tarefas" onAction="#openTarefas" />
+
+                <!-- Spacer empurra o botão 'Sair' para a direita -->
+                <Region HBox.hgrow="ALWAYS" />
+
+                <Button text="Sair" onAction="#logout" />
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Conteúdo central -->
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
+            <children>
+
+                <Label text="Dashboard" styleClass="page-title" />
+
+                <HBox spacing="20">
+                    <children>
+
+                        <VBox styleClass="card" spacing="10">
+                            <children>
+                                <Label text="2 de 3 tarefas concluídas" />
+                            </children>
+                        </VBox>
+
+                        <VBox styleClass="card" spacing="10">
+                            <children>
+                                <Label text="50%" />
+                            </children>
+                        </VBox>
+
+                    </children>
+                </HBox>
+
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

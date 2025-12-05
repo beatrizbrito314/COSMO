@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.LandingController">
+
+    <top>
+        <fx:include source="Navbar.fxml" />
+    </top>
+
+    <center>
+        <AnchorPane prefWidth="900" prefHeight="600" styleClass="fundo-landing">
+
+            <children>
+                <StackPane layoutX="150" layoutY="150" prefWidth="600" prefHeight="300" styleClass="card-landing">
+                    <VBox alignment="CENTER" spacing="20" prefWidth="560" prefHeight="260">
+                        <Label text="Bem-vindo ao Cosmo" styleClass="titulo-pag"/>
+                        <Label text="Transformando caos em harmonia" styleClass="texto-secundario"/>
+                        <Button text="Criar Conta" styleClass="botao-roxo" onAction="#openRegister"/>
+                    </VBox>
+                </StackPane>
+            </children>
+
+        </AnchorPane>
+    </center>
+
+</BorderPane>

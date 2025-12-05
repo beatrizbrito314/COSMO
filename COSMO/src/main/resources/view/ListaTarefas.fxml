@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="15"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ListaTarefasController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <children>
+
+        <Label text="Lista de Tarefas"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <TableView fx:id="tabelaTarefas" prefHeight="400">
+
+            <columns>
+
+                <TableColumn text="Nome" prefWidth="150">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nome"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn text="Data" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dataEntrega"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn text="Urg." prefWidth="70">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="peso"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn text="Dif." prefWidth="70">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="complexidade"/>
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn text="Disciplina" prefWidth="160" fx:id="colDisciplina"/>
+
+                <TableColumn text="Ações" prefWidth="100" fx:id="colAcao"/>
+
+            </columns>
+        </TableView>
+
+        <Button text="Voltar" onAction="#voltarParaCadastro" prefWidth="120"/>
+
+    </children>
+</VBox>

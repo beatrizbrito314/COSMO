@@ -12,14 +12,15 @@ public class Main extends javafx.application.Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-        changeScene("/view/Landing.fxml"); 
+        changeScene("/view/Landing.fxml");
         stage.setTitle("Cosmo");
         stage.show();
     }
 
     public static void changeScene(String fxml) {
+    	
         try {
-            
+            //Salva o tamanho atual da janela
             double width = stage.getWidth();
             double height = stage.getHeight();
 
@@ -36,6 +37,7 @@ public class Main extends javafx.application.Application {
             scene.getStylesheets().add(css);
 
             stage.setScene(scene);
+
             stage.setWidth(width);
             stage.setHeight(height);
 
@@ -53,3 +55,5 @@ public class Main extends javafx.application.Application {
         return stage;
     }
 }
+
+

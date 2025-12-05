@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.CadastroTarefaController">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <children>
+
+        <Label text="Cadastrar Tarefa"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="Nome:"/>
+                <TextField fx:id="txtNome" prefWidth="300"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="Data entrega (AAAA-MM-DD):"/>
+                <TextField fx:id="txtData" prefWidth="120"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="Urgência (1-5):"/>
+                <TextField fx:id="txtUrgencia" prefWidth="80"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="Dificuldade (1-5):"/>
+                <TextField fx:id="txtDificuldade" prefWidth="80"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="10">
+            <children>
+                <Label text="Disciplina:"/>
+                <ComboBox fx:id="cbDisciplina" prefWidth="220"/>
+            </children>
+        </HBox>
+
+        <Button text="Salvar" onAction="#salvarTarefa" prefWidth="120"/>
+        <Button text="Voltar" onAction="#voltar" prefWidth="120"/>
+
+    </children>
+</VBox>
