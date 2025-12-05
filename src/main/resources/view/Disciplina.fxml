@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.DisciplinaController"
+            prefWidth="600" prefHeight="400"
+            styleClass="bg-universe"
+            stylesheets="@../style/estilos.css">
+
+    <children>
+        <Label text="Disciplina"
+               layoutX="20" layoutY="20"
+               styleClass="page-title" />
+
+        <TextField fx:id="nomeDisciplina"
+                   promptText="Disciplina"
+                   layoutX="20" layoutY="60" />
+
+        <Button text="Salvar"
+                layoutX="20" layoutY="110"
+                fx:id="btnSalvar" />
+    </children>
+
+</AnchorPane>

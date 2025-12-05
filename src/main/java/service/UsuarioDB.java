@@ -13,23 +13,27 @@ import java.util.List;
 
 public class UsuarioDB {
 
-    private static final String FILE_PATH = "usuarios.json"; //arquivo onde os dados são armazenados
+    private static final String FILE_PATH = "usuarios.json"; // arquivo onde os dados são armazenados
     private Gson gson = new Gson();
 
+    // Carrega os usuários do arquivo JSON
     public List<Usuario> carregarUsuarios() {
         try (FileReader reader = new FileReader(FILE_PATH)) {
             Type listType = new TypeToken<ArrayList<Usuario>>() {}.getType();
-            return gson.fromJson(reader, listType);
+            List<Usuario> usuarios = gson.fromJson(reader, listType);
+            return usuarios != null ? usuarios : new ArrayList<>();
         } catch (Exception e) {
-            return new ArrayList<>(); // caso arquivo não exista
+            // arquivo não existe ou erro de leitura
+            return new ArrayList<>();
         }
     }
 
+    // Salva a lista de usuários no arquivo JSON
     public void salvarUsuarios(List<Usuario> usuarios) {
         try (FileWriter writer = new FileWriter(FILE_PATH)) {
             gson.toJson(usuarios, writer);
         } catch (IOException e) {
-            System.out.println("Erro ao salvar arquivo JSON: " + e.getMessage());
+            System.err.println("Não foi possível salvar os usuários: " + e.getMessage());
         }
     }
 }

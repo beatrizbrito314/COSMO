@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.SobreController">
+
+    <top>
+        <fx:include source="Navbar.fxml" />
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-fundo">
+            <VBox alignment="TOP_CENTER" spacing="40">
+
+                <padding>
+                    <Insets top="50" right="30" bottom="50" left="30"/>
+                </padding>
+
+                <!--Card principal-->
+                <VBox spacing="22" alignment="TOP_CENTER" prefWidth="750" styleClass="card-galaxy">
+
+                    <Label text="✨ Sobre o Cosmo" styleClass="titulo-galaxy"/>
+
+                    <Label wrapText="true" styleClass="texto-desc"
+                           text="O nome Cosmo tem origem no termo grego que significa 'ordem' e representa o universo como um sistema harmonioso e organizado, em contraste com o caos. Inspirados por esse conceito, desenvolvemos o COSMO, um gerenciador inteligente de tarefas pensado especialmente para o público universitário." />
+                    <Label wrapText="true" styleClass="texto-desc"
+                           text="O projeto nasceu com a missão de combinar funcionalidade e estética, desenvolvendo ferramentas acessíveis e inteligentes com foco no usuário. Mais do que um simples aplicativo de tarefas, o COSMO foi pensado para trazer ordem e clareza ao seu universo acadêmico, permitindo que você concentre energia no que realmente importa: aprender, produzir e conquistar seus objetivos." />
+                </VBox>
+
+                <!--Card da equipe-->
+                <VBox spacing="22" alignment="TOP_CENTER" prefWidth="750" styleClass="card-galaxy">
+
+                    <Label text="👩‍🚀 Nossa tripulação" styleClass="titulo-galaxy"/>
+
+                    <Label wrapText="true" styleClass="texto-desc"
+                           text="Por trás do Cosmo, há uma equipe de exploradores do universo acadêmico apaixonados por organizar o caos. Cada membro da nossa equipe é como um astronauta, navegando pelo cosmos do conhecimento e trazendo soluções inteligentes para facilitar a rotina universitária." />
+
+                    <Label wrapText="true" styleClass="texto-desc"
+                           text="Unindo criatividade e tecnologia, buscamos entregar um produto moderno, funcional e esteticamente único." />
+                </VBox>
+
+                <!--Carsd dos mesmbros-->
+                <VBox spacing="15" alignment="TOP_LEFT" prefWidth="750" styleClass="card-galaxy">
+
+                    <Label text="🪐 Cargos" styleClass="titulo-galaxy"/>
+
+                    <!--Minha astronauta-->
+					<HBox spacing="15" alignment="CENTER_LEFT">
+    					<ImageView fx:id="fotoSarah"
+           				fitWidth="80" fitHeight="80"
+          				 pickOnBounds="true" preserveRatio="true" />
+    					<VBox spacing="5">
+        					<Label text="Sarah Lima" styleClass="texto-titulo-membro"/>
+        					<Label wrapText="true" styleClass="texto-desc"
+               						text="Capitã da missão, responsável pelo design e organização do Cosmo." />
+    					</VBox>
+				</HBox>
+                    
+
+                    <!--Astrounauta de Bia-->
+                    <HBox spacing="15" alignment="CENTER_LEFT">
+                        <ImageView fx:id="fotoBia" fitWidth="80" fitHeight="80" pickOnBounds="true" preserveRatio="true" />
+                        <VBox spacing="5">
+                            <Label text="Emilly Beatriz" styleClass="texto-titulo-membro"/>
+                            <Label wrapText="true" styleClass="texto-desc"
+                                   text="Co-piloto da jornada, responsável pelo desenvolvimento das funções e funcionalidades inteligentes." />
+                        </VBox>
+                    </HBox>
+
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>
