@@ -211,4 +211,39 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 2,0.0,0,1); 
 }
 
+/* Glow leve nos campos ao focar */
+.campo-input:focused {
+    -fx-border-color: #a18cff;
+    -fx-background-color: rgba(255,255,255,0.12);
+    -fx-effect: dropshadow(gaussian, rgba(161,140,255,0.45), 12, 0.3, 0, 0);
+}
+
+/* Botões com animação de sombra e brilho */
+.botao-roxo {
+    -fx-background-color: #5f27cd;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.botao-roxo:hover {
+    -fx-background-color: #a18cff;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.6), 15, 0.4, 0, 0);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Card form com leve transparência e borda sutil */
+.card-form {
+    -fx-background-color: rgba(255,255,255,0.04);
+    -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 0 20 20 0;
+    -fx-border-color: rgba(180,160,255,0.15);
+    -fx-padding: 30 25;
+    -fx-effect: dropshadow(gaussian, rgba(160,130,255,0.2), 30, 0.3, 0, 0);
+}
 

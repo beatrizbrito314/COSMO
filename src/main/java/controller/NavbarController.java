@@ -20,7 +20,7 @@ public class NavbarController {
 
     //Fazendo o redirecionamento
     private final String HOME_VIEW = "/view/Landing.fxml"; 
-    private final String FEATURES_VIEW = "/view/Features.fxml"; //Mudar aqui quando a página tiver pronta
+    private final String FEATURES_VIEW = "/view/Home.fxml"; //Mudar aqui quando a página tiver pronta
     private final String ABOUT_VIEW = "/view/Sobre.fxml";
     private final String CONTACT_VIEW = "/view/Contato.fxml";
 

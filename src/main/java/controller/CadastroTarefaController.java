@@ -96,3 +96,4 @@ public class CadastroTarefaController {
         alert.showAndWait();
     }
 }
+

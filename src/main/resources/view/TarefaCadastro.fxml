@@ -2,60 +2,68 @@
 
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
-<VBox spacing="10"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.CadastroTarefaController">
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="controller.CadastroTarefaController"
+           stylesheets="@/style/estilos.css"
+           styleClass="fundo-uni">
 
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
-    </padding>
+    <VBox spacing="20" alignment="CENTER">
 
-    <children>
+        <!--Card grande-->
+        <HBox spacing="0" styleClass="card-grande" alignment="CENTER">
 
-        <Label text="Cadastrar Tarefa"
-               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+            <!--Lado esquerdo(gif)-->
+            <VBox styleClass="card-foto" alignment="CENTER">
+                <ImageView fitWidth="200" fitHeight="250" preserveRatio="true" pickOnBounds="true" style="-fx-opacity:0.85;">
+                    <image>
+                        <Image url="@/images/Ctare.gif"/>
+                    </image>
+                </ImageView>
+            </VBox>
 
-        <HBox spacing="10">
-            <children>
-                <Label text="Nome:"/>
-                <TextField fx:id="txtNome" prefWidth="300"/>
-            </children>
+            <!--Lado direito(form)-->
+            <VBox spacing="15" styleClass="card-form">
+
+                <Label text="Cadastrar Tarefa" styleClass="titulo-form"/>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Nome:" styleClass="texto-secundario"/>
+                    <TextField fx:id="txtNome" styleClass="campo-input" prefWidth="280"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Data entrega (AAAA-MM-DD):" styleClass="texto-secundario"/>
+                    <TextField fx:id="txtData" styleClass="campo-input" prefWidth="120"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Urgência (1-5):" styleClass="texto-secundario"/>
+                    <TextField fx:id="txtUrgencia" styleClass="campo-input" prefWidth="80"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Dificuldade (1-5):" styleClass="texto-secundario"/>
+                    <TextField fx:id="txtDificuldade" styleClass="campo-input" prefWidth="80"/>
+                </HBox>
+
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Disciplina:" styleClass="texto-secundario"/>
+                    <ComboBox fx:id="cbDisciplina" styleClass="campo-input" prefWidth="220"/>
+                </HBox>
+
+                <HBox spacing="20" alignment="CENTER">
+                    <Button text="Salvar" onAction="#salvarTarefa" styleClass="botao-roxo" prefWidth="120"/>
+                    <Button text="Voltar" onAction="#voltar" styleClass="botao-roxo" prefWidth="120"/>
+                </HBox>
+
+            </VBox>
         </HBox>
-
-        <HBox spacing="10">
-            <children>
-                <Label text="Data entrega (AAAA-MM-DD):"/>
-                <TextField fx:id="txtData" prefWidth="120"/>
-            </children>
-        </HBox>
-
-        <HBox spacing="10">
-            <children>
-                <Label text="Urgência (1-5):"/>
-                <TextField fx:id="txtUrgencia" prefWidth="80"/>
-            </children>
-        </HBox>
-
-        <HBox spacing="10">
-            <children>
-                <Label text="Dificuldade (1-5):"/>
-                <TextField fx:id="txtDificuldade" prefWidth="80"/>
-            </children>
-        </HBox>
-
-        <HBox spacing="10">
-            <children>
-                <Label text="Disciplina:"/>
-                <ComboBox fx:id="cbDisciplina" prefWidth="220"/>
-            </children>
-        </HBox>
-
-        <Button text="Salvar" onAction="#salvarTarefa" prefWidth="120"/>
-        <Button text="Voltar" onAction="#voltar" prefWidth="120"/>
-
-    </children>
-</VBox>
+    </VBox>
+</StackPane>
