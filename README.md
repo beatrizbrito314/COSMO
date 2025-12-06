@@ -55,7 +55,7 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
   <tr>
     <td align="center">
       <a href="https://github.com/heyitssarah">
-        <img src="https://github.com/heyitssarah.png" width="100px;" alt="Sarah Lima"/>
+        <img src="https://github.com/sarahiaa.png" width="100px;" alt="Sarah Lima"/>
         <br />
         <sub><b>Sarah Lima</b></sub>
       </a>
