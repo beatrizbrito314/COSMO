@@ -19,7 +19,7 @@ public class CadastroTarefaController {
 
     @FXML
     public void initialize() {
-        // popula combobox com disciplinas (toString() de Disciplina retorna nome)
+        
         cbDisciplina.getItems().clear();
         cbDisciplina.getItems().addAll(disciplinaService.getDisciplinas());
     }
@@ -43,7 +43,7 @@ public class CadastroTarefaController {
             }
 
             try {
-                java.time.LocalDate.parse(dataEntrega); // valida formato
+                java.time.LocalDate.parse(dataEntrega); 
             } catch (Exception e) {
                 mostrarMensagem("Data inválida! Use o formato AAAA-MM-DD.");
                 return;
@@ -53,13 +53,13 @@ public class CadastroTarefaController {
             Disciplina sel = cbDisciplina.getSelectionModel().getSelectedItem();
             if (sel != null) disciplinaID = sel.getDiscID();
 
-            // Criar tarefa com disciplina associada
+            //Criaa uma tarefa com uma disciplina associada
             Tarefa tarefa = new Tarefa(
                     nome,
                     dataEntrega,
-                    urgencia,      // peso
-                    dificuldade,   // complexidade
-                    0,             // prioridade inicial (será recalculada)
+                    urgencia,      //Peso
+                    dificuldade,   //Complexidade
+                    0,             
                     disciplinaID
             );
 

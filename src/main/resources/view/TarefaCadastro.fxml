@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -8,62 +9,75 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 
-<StackPane xmlns="http://javafx.com/javafx/21"
-           xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="controller.CadastroTarefaController"
-           stylesheets="@/style/estilos.css"
-           styleClass="fundo-uni">
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.CadastroTarefaController"
+            stylesheets="@/style/estilos.css"
+            styleClass="fundo-uni">
 
-    <VBox spacing="20" alignment="CENTER">
+    <!-- Navbar no topo -->
+    <top>
+        <fx:include source="navbar.fxml"/>
+    </top>
 
-        <!--Card grande-->
-        <HBox spacing="0" styleClass="card-grande" alignment="CENTER">
+    <!-- Conteúdo central -->
+    <center>
+        <VBox spacing="20" alignment="TOP_CENTER">
+            <!-- Padding para empurrar o card para baixo -->
+            <padding>
+                <Insets top="60" right="0" bottom="0" left="0"/>
+            </padding>
 
-            <!--Lado esquerdo(gif)-->
-            <VBox styleClass="card-foto" alignment="CENTER">
-                <ImageView fitWidth="200" fitHeight="250" preserveRatio="true" pickOnBounds="true" style="-fx-opacity:0.85;">
-                    <image>
-                        <Image url="@/images/Ctare.gif"/>
-                    </image>
-                </ImageView>
-            </VBox>
+            <!-- Card grande -->
+            <HBox spacing="0" styleClass="card-grande" alignment="CENTER">
 
-            <!--Lado direito(form)-->
-            <VBox spacing="15" styleClass="card-form">
+                <!-- Lado esquerdo (GIF) -->
+                <VBox styleClass="card-foto" alignment="CENTER">
+                    <ImageView fitWidth="200" fitHeight="250" preserveRatio="true" pickOnBounds="true" style="-fx-opacity:0.85;">
+                        <image>
+                            <Image url="@/images/Ctare.gif"/>
+                        </image>
+                    </ImageView>
+                </VBox>
 
-                <Label text="Cadastrar Tarefa" styleClass="titulo-form"/>
+                <!-- Lado direito (formulário) -->
+                <VBox spacing="15" styleClass="card-form">
 
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <Label text="Nome:" styleClass="texto-secundario"/>
-                    <TextField fx:id="txtNome" styleClass="campo-input" prefWidth="280"/>
-                </HBox>
+                    <Label text="Cadastrar Tarefa" styleClass="titulo-form"/>
 
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <Label text="Data entrega (AAAA-MM-DD):" styleClass="texto-secundario"/>
-                    <TextField fx:id="txtData" styleClass="campo-input" prefWidth="120"/>
-                </HBox>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Nome:" styleClass="texto-secundario"/>
+                        <TextField fx:id="txtNome" styleClass="campo-input" prefWidth="280"/>
+                    </HBox>
 
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <Label text="Urgência (1-5):" styleClass="texto-secundario"/>
-                    <TextField fx:id="txtUrgencia" styleClass="campo-input" prefWidth="80"/>
-                </HBox>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Data entrega (AAAA-MM-DD):" styleClass="texto-secundario"/>
+                        <TextField fx:id="txtData" styleClass="campo-input" prefWidth="120"/>
+                    </HBox>
 
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <Label text="Dificuldade (1-5):" styleClass="texto-secundario"/>
-                    <TextField fx:id="txtDificuldade" styleClass="campo-input" prefWidth="80"/>
-                </HBox>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Urgência (1-5):" styleClass="texto-secundario"/>
+                        <TextField fx:id="txtUrgencia" styleClass="campo-input" prefWidth="80"/>
+                    </HBox>
 
-                <HBox spacing="10" alignment="CENTER_LEFT">
-                    <Label text="Disciplina:" styleClass="texto-secundario"/>
-                    <ComboBox fx:id="cbDisciplina" styleClass="campo-input" prefWidth="220"/>
-                </HBox>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Dificuldade (1-5):" styleClass="texto-secundario"/>
+                        <TextField fx:id="txtDificuldade" styleClass="campo-input" prefWidth="80"/>
+                    </HBox>
 
-                <HBox spacing="20" alignment="CENTER">
-                    <Button text="Salvar" onAction="#salvarTarefa" styleClass="botao-roxo" prefWidth="120"/>
-                    <Button text="Voltar" onAction="#voltar" styleClass="botao-roxo" prefWidth="120"/>
-                </HBox>
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Disciplina:" styleClass="texto-secundario"/>
+                        <ComboBox fx:id="cbDisciplina" styleClass="campo-input" prefWidth="220"/>
+                    </HBox>
 
-            </VBox>
-        </HBox>
-    </VBox>
-</StackPane>
+                    <HBox spacing="20" alignment="CENTER">
+                        <Button text="Salvar" onAction="#salvarTarefa" styleClass="botao-roxo" prefWidth="120"/>
+                        <Button text="Voltar" onAction="#voltar" styleClass="botao-roxo" prefWidth="120"/>
+                    </HBox>
+
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
+
