@@ -1,15 +1,33 @@
 package controller;
 
-import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.io.IOException;
 
-public class HomeController {
+import service.Session; 
+import model.Usuario;
+
+public class HomeController implements Initializable {
+
+    @FXML private Label saudacaoLabel; 
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+      
+        Usuario usuarioLogado = Session.getUsuarioLogado();
+        if (usuarioLogado != null) {
+            saudacaoLabel.setText("Olá, " + usuarioLogado.getNome() + "!");
+        }
+    }
 
     private Stage getStage(ActionEvent event) {
         return (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -17,23 +35,11 @@ public class HomeController {
 
     private void trocarCena(ActionEvent event, String caminhoFXML) {
         try {
-            System.out.println("[HomeController] Tentando carregar: " + caminhoFXML);
-
-            var url = getClass().getResource(caminhoFXML);
-
-            Parent root = FXMLLoader.load(url);
-
+            Parent root = FXMLLoader.load(getClass().getResource(caminhoFXML));
             Stage stage = getStage(event);
             stage.setScene(new Scene(root));
             stage.show();
-
-            System.out.println("[HomeController] Cena carregada com sucesso!");
-
         } catch (IOException e) {
-            System.err.println("[ERRO] Falha ao carregar FXML: " + caminhoFXML);
-            e.printStackTrace();
-        } catch (Exception e) {
-            System.err.println("[ERRO] Erro inesperado ao trocar cena.");
             e.printStackTrace();
         }
     }
@@ -50,6 +56,9 @@ public class HomeController {
 
     @FXML
     private void logout(ActionEvent event) {
+      
+        Session.setUsuarioLogado(null);
         trocarCena(event, "/view/Login.fxml");
     }
 }
+

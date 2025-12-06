@@ -16,7 +16,7 @@
     -fx-background-size: cover; 
 }
 
-/* Card escuro*/
+/*Card escuro*/
 .card-landing {
     -fx-background-color: rgba(0, 0, 0, 0.2);
     -fx-background-radius: 20;
@@ -68,15 +68,13 @@
     -fx-font-size: 25px;
     -fx-font-weight: bold;
 
-    /* Degradê sutil Cosmo */
+    /*Degradê*/
     -fx-text-fill: linear-gradient(
         from 0% 0% to 100% 100%,
         #b8c3ff 0%,
         #dcdfff 50%,
         #ffffff 100%
     );
-
-    /* Glow suave espacial */
     -fx-effect: dropshadow(gaussian, rgba(200, 220, 255, 0.8), 18, 0.3, 0, 0);
 }
 
@@ -95,17 +93,20 @@
 /*Botões*/
 .botao-roxo {
     -fx-background-color: #5f27cd;
-    -fx-background-radius: 8;
     -fx-text-fill: white;
     -fx-font-size: 15px;
-    -fx-padding: 8 18;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20;
     -fx-cursor: hand;
-	-fx-transition: all 0.2s ease-in-out;
+    -fx-transition: all 0.3s ease-in-out;
 }
 
 .botao-roxo:hover {
     -fx-background-color: #a18cff;
-	-fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.85), 12, 0.35, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.6), 15, 0.4, 0, 0);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
 }
 
 /*Links e textos*/
@@ -181,7 +182,7 @@
     -fx-text-fill: #f0eaff;
 }
 
-/*Sobre e contato*/
+/*Telas Sobre e Contato*/
 .card-galaxy {
     -fx-background-color: rgba(255,255,255,0.05);
     -fx-background-radius: 20;
@@ -220,7 +221,6 @@
     -fx-background-color: transparent;
 }
 
-/*Nomes dos membros da equipe*/
 .texto-titulo-membro {
     -fx-text-fill: #f0e68c;      
     -fx-font-size: 16px;         
@@ -229,41 +229,13 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 2,0.0,0,1); 
 }
 
-/* Glow leve nos campos ao focar */
 .campo-input:focused {
     -fx-border-color: #a18cff;
     -fx-background-color: rgba(255,255,255,0.12);
     -fx-effect: dropshadow(gaussian, rgba(161,140,255,0.45), 12, 0.3, 0, 0);
 }
 
-/* Botões com animação de sombra e brilho */
-.botao-roxo {
-    -fx-background-color: #5f27cd;
-    -fx-text-fill: white;
-    -fx-font-size: 15px;
-    -fx-font-weight: bold;
-    -fx-background-radius: 10;
-    -fx-padding: 10 20;
-    -fx-cursor: hand;
-    -fx-transition: all 0.3s ease-in-out;
-}
 
-.botao-roxo:hover {
-    -fx-background-color: #a18cff;
-    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.6), 15, 0.4, 0, 0);
-    -fx-scale-x: 1.03;
-    -fx-scale-y: 1.03;
-}
-
-/* Card form com leve transparência e borda sutil */
-.card-form {
-    -fx-background-color: rgba(255,255,255,0.04);
-    -fx-background-radius: 0 20 20 0;
-    -fx-border-radius: 0 20 20 0;
-    -fx-border-color: rgba(180,160,255,0.15);
-    -fx-padding: 30 25;
-    -fx-effect: dropshadow(gaussian, rgba(160,130,255,0.2), 30, 0.3, 0, 0);
-}
 
 /* ===============================
    LISTA DE TAREFAS - COSMO STYLE
@@ -309,9 +281,7 @@
 }
 
 
-/* ===========================
-   Cards
-=========================== */
+/*Cards*/
 .card {
     -fx-background-color: #FFFFFF;
     -fx-padding: 20;
@@ -328,17 +298,42 @@
     -fx-text-fill: #2E3B55;
 }
 
-/* Progress bar estilo Cosmo */
-.progress-bar {
-    -fx-accent: #4CAF50; /* cor verde Cosmo */
-    -fx-pref-height: 15px;
-    -fx-background-radius: 8;
+.card-form {
+    -fx-background-color: rgba(255,255,255,0.04);
+    -fx-background-radius: 0 20 20 0;
+    -fx-border-radius: 0 20 20 0;
+    -fx-border-color: rgba(180,160,255,0.15);
+    -fx-padding: 30 25;
+    -fx-effect: dropshadow(gaussian, rgba(160,130,255,0.2), 30, 0.3, 0, 0);
 }
 
-/* Hover leve para cards existentes */
-.card-grande:hover {
+.card-home:hover {
 	-fx-transition: all 0.3s ease-in-out;
     -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 20, 0.3, 0, 0);
     -fx-scale-x: 1.08;
     -fx-scale-y: 1.08;
 }
+
+.card-home {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 25, 0.3, 0, 0);
+    -fx-padding: 18;
+}
+
+/*Barra de progresso*/
+.progress-bar {
+    -fx-accent: #abbef5; 
+    -fx-pref-height: 15px;
+    -fx-background-radius: 8;
+}
+
+/*Mensagem de erro do login*/ 
+.mensagem-erro {
+    -fx-text-fill: red;           
+    -fx-font-size: 15px;         
+    -fx-font-weight: bold;        
+}
+
+

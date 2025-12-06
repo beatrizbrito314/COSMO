@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.fxml.FXMLLoader?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17"
+<BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controller.HomeController"
             stylesheets="@../style/estilos.css"
@@ -14,8 +14,7 @@
     <top>
         <fx:include source="Navbar.fxml"/>
     </top>
-
-
+    
     <center>
         <VBox spacing="35" alignment="CENTER" BorderPane.alignment="CENTER">
             
@@ -23,24 +22,21 @@
                 <Insets top="30" right="30" bottom="30" left="30"/>
             </padding>
 
-            <!--Tenho que mexer nessa saudação ainda-->
-            <Label fx:id="saudacaoLabel" text="Olá, Usuário!" styleClass="titulo-pag"/>
- 
+            <Label fx:id="saudacaoLabel" text="Olá, Usuário!" styleClass="titulo-principal"/>
+
             <HBox spacing="25" alignment="CENTER">
 
-                <VBox styleClass="card-grande" spacing="15" alignment="CENTER" fx:id="cardTarefas"
-                      onMouseClicked="#openDisciplina">
+                <VBox fx:id="cardTarefas" styleClass="card-grande" spacing="15" alignment="CENTER">
                     <children>
-                        <Label text="Tarefas Concluídas" styleClass="titulo-principal"/>
+                        <Label text="Tarefas Concluídas" styleClass="titulo-pag"/>
                         <Label text="2 de 3 tarefas concluídas" styleClass="texto-secundario"/>
                         <ProgressBar progress="0.66" prefWidth="180"/>
                     </children>
                 </VBox>
 
-                <VBox styleClass="card-grande" spacing="15" alignment="CENTER" fx:id="cardProgresso"
-                      onMouseClicked="#openTarefas">
+                <VBox fx:id="cardProgresso" styleClass="card-grande" spacing="15" alignment="CENTER">
                     <children>
-                        <Label text="Progresso Geral" styleClass="titulo-principal"/>
+                        <Label text="Progresso Geral" styleClass="titulo-pag"/>
                         <Label text="50%" styleClass="texto-secundario"/>
                         <ProgressBar progress="0.5" prefWidth="180"/>
                     </children>

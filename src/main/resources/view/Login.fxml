@@ -3,23 +3,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.image.*?>
 
+<!-- Tela de login do Cosmo -->
 <BorderPane xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controller.LoginController"
-            prefWidth="900" prefHeight="600">
+            style="-fx-background-color: #f0f0f0;">  <!-- fundo da tela -->
 
+    <!-- Navbar incluída no topo -->
     <top>
         <fx:include source="Navbar.fxml" />
     </top>
 
+    <!-- Conteúdo central -->
     <center>
-        <StackPane styleClass="fundo-uni">
+        <!-- StackPane flexível que preenche toda a área central -->
+        <StackPane styleClass="fundo-uni" alignment="CENTER">
+            <!-- HBox do card centralizado -->
+            <HBox alignment="CENTER" spacing="0" styleClass="card-grande">
 
-            <HBox alignment="CENTER"
-                  spacing="0"
-                  prefWidth="750" prefHeight="420"
-                  styleClass="card-grande">
-
+                <!-- Lado da imagem -->
                 <StackPane prefWidth="360" prefHeight="420" styleClass="card-foto" HBox.hgrow="NEVER">
                     <ImageView fx:id="leftImage"
                                fitWidth="360"
@@ -33,9 +35,12 @@
 
                 <VBox alignment="CENTER" spacing="12" prefWidth="390" styleClass="card-form" HBox.hgrow="NEVER">
                     <Label text="Acesse seu universo" styleClass="titulo-form"/>
-                    <TextField fx:id="usuario" promptText="Usuário" styleClass="campo-input"/>
+                    <TextField fx:id="usuario" promptText="Email" styleClass="campo-input"/>
                     <PasswordField fx:id="senha" promptText="Senha" styleClass="campo-senha"/>
                     <Button text="Entrar" styleClass="botao-roxo" onAction="#doLogin"/>
+                    
+                    <Label fx:id="mensagem" text="" styleClass="mensagem-erro"/>
+
                     <HBox alignment="CENTER" spacing="8">
                         <Label text="Ainda não tem conta?" styleClass="texto-redirec"/>
                         <Label text="Criar conta" styleClass="link" onMouseClicked="#goToRegister"/>
@@ -43,7 +48,7 @@
                 </VBox>
 
             </HBox>
-
         </StackPane>
     </center>
 </BorderPane>
+

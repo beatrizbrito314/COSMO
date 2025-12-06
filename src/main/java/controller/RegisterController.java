@@ -24,9 +24,9 @@ public class RegisterController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            URL imgUrl = getClass().getResource("/images/conta.jpg");
+            URL imgUrl = getClass().getResource("/images/conta.png");
             if (imgUrl == null) {
-                System.err.println("[RegisterController] imagem /images/conta.jpg NÃO encontrada.");
+                System.err.println("[RegisterController] imagem /images/conta.png NÃO encontrada.");
             } else {
                 leftImage.setImage(new Image(imgUrl.toExternalForm()));
             }
