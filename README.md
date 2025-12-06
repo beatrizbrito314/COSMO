@@ -1,6 +1,6 @@
 # Cosmo ​🌠​
 
-![Cosmo Banner](./images/banner.png)  
+![Cosmo Banner](images/banner.png)  
 *Bem-vindo ao Cosmo, o seu universo de tarefas e progresso acadêmico!*
 
 O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento de tarefas e acompanhamento de progresso universitário. Com uma interface inspirada no universo e navegação simplificada,  o Cosmo transforma o acompanhamento de tarefas em uma experiência agradável e visualmente imersiva.  
