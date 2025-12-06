@@ -1,32 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox spacing="15"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.ListaDisciplinasController">
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.ListaDisciplinasController"
+            stylesheets="@../style/estilos.css"
+            styleClass="fundo-landing">
+
+    <top>
+        <fx:include source="Navbar.fxml"/>
+    </top>
 
     <padding>
-        <Insets top="20" left="20" right="20" bottom="20"/>
+        <Insets top="0" left="0" right="0" bottom="0"/>
     </padding>
 
-    <children>
+    <center>
+        <VBox spacing="20"
+              alignment="CENTER">
 
-        <Label text="Disciplinas"
-               style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+            <Label text="Disciplinas"
+                   styleClass="titulo-principal"/>
 
-        <ListView fx:id="listaDisciplinas" prefHeight="350"/>
+            <VBox spacing="10"
+                  alignment="CENTER"
+                  styleClass="card-grande"
+                  prefWidth="500">
 
-        <Button text="Cadastrar Nova Disciplina"
-                onAction="#irParaCadastro"
-                prefWidth="200"/>
+                <ListView fx:id="listaDisciplinas"
+                          fixedCellSize="50"
+                          prefHeight="250"
+                          maxHeight="250"
+                          minHeight="250"
+                          styleClass="lista-cosmo"
+                          VBox.vgrow="NEVER"/>
 
-        <Button text="Voltar à Home"
-                onAction="#voltarHome"
-                prefWidth="200"/>
+                <Button text="Cadastrar Nova Disciplina"
+                        onAction="#irParaCadastro"
+                        styleClass="botao-roxo"/>
 
-    </children>
-</VBox>
+                <Button text="Voltar à Home"
+                        onAction="#voltarHome"
+                        styleClass="botao-roxo"/>
+
+                <padding>
+                    <Insets top="5" bottom="10"/>
+                </padding>
+
+            </VBox>
+        </VBox>
+        
+    </center>
+
+</BorderPane>
+

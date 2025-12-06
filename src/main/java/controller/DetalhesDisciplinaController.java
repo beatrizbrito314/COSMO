@@ -21,11 +21,16 @@ public class DetalhesDisciplinaController {
 
     @FXML
     public void initialize() {
-        lblNome.setText(disciplinaSelecionada.getNome());
+        if (disciplinaSelecionada != null) {
+            lblNome.setText(disciplinaSelecionada.getNome());
 
-        disciplinaSelecionada.getTarefas().forEach(t ->
-            listaTarefas.getItems().add(t.getNome() + " - entrega: " + t.getDataEntrega())
-        );
+            // Preenche a ListView exatamente como antes (texto original)
+            disciplinaSelecionada.getTarefas().forEach(t ->
+                listaTarefas.getItems().add(t.getNome() + " - entrega: " + t.getDataEntrega())
+            );
+        } else {
+            lblNome.setText("");
+        }
     }
 
     @FXML
@@ -33,4 +38,3 @@ public class DetalhesDisciplinaController {
         Navigation.goTo("/view/ListaDisciplinas.fxml");
     }
 }
-

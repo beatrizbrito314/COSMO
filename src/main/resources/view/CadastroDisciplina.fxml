@@ -3,28 +3,52 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 
-<VBox spacing="15"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.CadastroDisciplinaController">
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.CadastroDisciplinaController"
+            stylesheets="@/style/estilos.css"
+            styleClass="fundo-landing">
 
-    <padding>
-        <Insets top="20" left="20" right="20" bottom="20"/>
-    </padding>
+    <top>
+        <fx:include source="Navbar.fxml"/>
+    </top>
 
-    <children>
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="30" left="40" right="40" bottom="40"/>
+            </padding>
 
-        <Label text="Cadastrar Disciplina"
-               style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+            <Label text="Cadastrar Disciplina" styleClass="titulo-galaxy"/>
 
-        <HBox spacing="10">
-            <Label text="Nome:"/>
-            <TextField fx:id="txtNome" prefWidth="300"/>
-        </HBox>
+            <HBox alignment="CENTER" spacing="0" styleClass="card-grande" maxWidth="800">
+                <StackPane prefWidth="220" alignment="CENTER" styleClass="card-foto">
+                    <ImageView fitWidth="200" preserveRatio="true">
+                        <image>
+                            <Image url="@/images/disciplina.png"/>
+                        </image>
+                    </ImageView>
 
-        <Button text="Salvar" onAction="#salvar"/>
-        <Button text="Voltar" onAction="#voltar"/>
+                    <Label text="📚" style="-fx-font-size: 48px; -fx-font-weight: bold;"/>
+                </StackPane>
 
-    </children>
-</VBox>
+                <VBox spacing="15" styleClass="card-form" alignment="CENTER_LEFT" prefWidth="520">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <Label text="Nome:" styleClass="texto-secundario"/>
+                        <TextField fx:id="txtNome" prefWidth="360" styleClass="campo-input"/>
+                    </HBox>
+
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button text="Salvar" onAction="#salvar" styleClass="botao-roxo"/>
+                        <Button text="Voltar" onAction="#voltar" styleClass="botao-roxo"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
+

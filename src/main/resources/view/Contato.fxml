@@ -30,7 +30,7 @@
 
                     <HBox spacing="12" alignment="CENTER_LEFT">
                         <Label text="📧 Email:" styleClass="texto-secundario"/>
-                        <Label text="counicacao@cosmo.com" styleClass="link"/>
+                        <Label text="comunicacao@cosmo.com" styleClass="link"/>
                     </HBox>
 
                     <HBox spacing="12" alignment="CENTER_LEFT">
@@ -51,6 +51,9 @@
                 </VBox>
 
             </VBox>
+            
         </ScrollPane>
     </center>
+    
 </BorderPane>
+

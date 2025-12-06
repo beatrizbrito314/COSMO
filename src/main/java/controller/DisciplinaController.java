@@ -15,7 +15,6 @@ public class DisciplinaController {
 
 @FXML
 private void salvar() {
-// Exemplo simples
 statusLabel.setText("Salvo com sucesso");
 }
 }

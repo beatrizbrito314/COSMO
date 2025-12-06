@@ -1,27 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<VBox spacing="15"
-      xmlns="http://javafx.com/javafx/21"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.DetalhesDisciplinaController">
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.DetalhesDisciplinaController"
+            stylesheets="@../style/estilos.css"
+            styleClass="fundo-landing">
 
-    <padding>
-        <Insets top="20" left="20" right="20" bottom="20"/>
-    </padding>
+    <top>
+        <fx:include source="Navbar.fxml"/>
+    </top>
 
-    <children>
+    <center>
+        <VBox spacing="20"
+              alignment="CENTER"
+              BorderPane.alignment="CENTER">
 
-        <Label fx:id="lblNome" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+            <!--Esse padding tá me estressando já-->
+            <padding>
+                <Insets top="20" right="40" bottom="40" left="40"/>
+            </padding>
 
-        <Label text="Tarefas:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Label fx:id="lblNome"
+                   styleClass="titulo-principal"
+                   text="Disciplina"/>
 
-        <ListView fx:id="listaTarefas" prefHeight="300"/>
+            <VBox spacing="15"
+                  styleClass="card-grande"
+                  alignment="CENTER"
+                  prefWidth="500">
 
-        <Button text="Voltar" onAction="#voltar"/>
+                <Label text="Tarefas:"
+                       styleClass="texto-secundario"/>
 
-    </children>
-</VBox>
+                <ListView fx:id="listaTarefas"
+                          prefHeight="300"
+                          styleClass="lista-cosmo"
+                          fixedCellSize="48">
+                    <padding>
+                        <Insets top="5" bottom="5"/>
+                    </padding>
+                </ListView>
+
+                <Button text="Voltar"
+                        onAction="#voltar"
+                        styleClass="botao-roxo"/>
+            </VBox>
+
+        </VBox>
+        
+    </center>
+
+</BorderPane>
+
+

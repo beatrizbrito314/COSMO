@@ -53,12 +53,11 @@ public class CadastroTarefaController {
             Disciplina sel = cbDisciplina.getSelectionModel().getSelectedItem();
             if (sel != null) disciplinaID = sel.getDiscID();
 
-            //Criaa uma tarefa com uma disciplina associada
             Tarefa tarefa = new Tarefa(
                     nome,
                     dataEntrega,
-                    urgencia,      //Peso
-                    dificuldade,   //Complexidade
+                    urgencia,     
+                    dificuldade,   
                     0,             
                     disciplinaID
             );
@@ -96,4 +95,5 @@ public class CadastroTarefaController {
         alert.showAndWait();
     }
 }
+
 

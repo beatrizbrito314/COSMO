@@ -18,10 +18,10 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
 
-    @FXML private TextField email;        // campo de email
-    @FXML private PasswordField senha;    // campo de senha
-    @FXML private ImageView leftImage;    // imagem à esquerda
-    @FXML private Label mensagem;         // mensagem de erro/sucesso
+    @FXML private TextField email;        
+    @FXML private PasswordField senha;    
+    @FXML private ImageView leftImage;    
+    @FXML private Label mensagem;        
 
     private UsuarioService usuarioService = new UsuarioService();
 
@@ -39,7 +39,7 @@ public class LoginController implements Initializable {
         }
     }
 
-    // ================== LOGIN ==================
+    
     @FXML
     private void doLogin(ActionEvent event) {
         String emailInput = email.getText();
@@ -50,7 +50,7 @@ public class LoginController implements Initializable {
         if (user != null) {
             System.out.println("[LoginController] Login realizado com sucesso: " + emailInput);
             try {
-                Main.changeScene("/view/Home.fxml"); // ou outra tela pós-login
+                Main.changeScene("/view/Home.fxml"); 
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -62,7 +62,6 @@ public class LoginController implements Initializable {
         }
     }
 
-    // ================== IR PARA REGISTRO ==================
     @FXML
     private void goToRegister(ActionEvent event) {
         try {
@@ -72,12 +71,4 @@ public class LoginController implements Initializable {
         }
     }
 
-    @FXML
-    private void goToRegister(MouseEvent event) {
-        try {
-            Main.changeScene("/view/Register.fxml");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }

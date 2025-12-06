@@ -15,23 +15,19 @@
             stylesheets="@/style/estilos.css"
             styleClass="fundo-uni">
 
-    <!-- Navbar no topo -->
     <top>
         <fx:include source="navbar.fxml"/>
     </top>
 
-    <!-- Conteúdo central -->
     <center>
         <VBox spacing="20" alignment="TOP_CENTER">
-            <!-- Padding para empurrar o card para baixo -->
+        
             <padding>
                 <Insets top="60" right="0" bottom="0" left="0"/>
             </padding>
 
-            <!-- Card grande -->
             <HBox spacing="0" styleClass="card-grande" alignment="CENTER">
 
-                <!-- Lado esquerdo (GIF) -->
                 <VBox styleClass="card-foto" alignment="CENTER">
                     <ImageView fitWidth="200" fitHeight="250" preserveRatio="true" pickOnBounds="true" style="-fx-opacity:0.85;">
                         <image>
@@ -40,10 +36,9 @@
                     </ImageView>
                 </VBox>
 
-                <!-- Lado direito (formulário) -->
                 <VBox spacing="15" styleClass="card-form">
 
-                    <Label text="Cadastrar Tarefa" styleClass="titulo-form"/>
+                    <Label text="Cadastrar Tarefa" styleClass="titulo-galaxy"/>
 
                     <HBox spacing="10" alignment="CENTER_LEFT">
                         <Label text="Nome:" styleClass="texto-secundario"/>
@@ -78,6 +73,7 @@
                 </VBox>
             </HBox>
         </VBox>
+        
     </center>
 </BorderPane>
 

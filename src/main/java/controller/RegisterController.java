@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import application.Main;
 import service.UsuarioService;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -36,7 +35,6 @@ public class RegisterController implements Initializable {
         }
     }
 
-    // ================== CADASTRAR ==================
     @FXML
     private void createAccount() {
         String nomeInput = usuario.getText();
@@ -57,7 +55,6 @@ public class RegisterController implements Initializable {
         }
     }
 
-    // ================== VOLTAR PARA LOGIN ==================
     @FXML
     private void goToLogin(MouseEvent event) {
         try {

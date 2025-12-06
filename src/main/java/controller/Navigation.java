@@ -12,7 +12,6 @@ public class Navigation {
             FXMLLoader loader = new FXMLLoader(Navigation.class.getResource(path));
             Scene scene = new Scene(loader.load());
 
-            // pega o stage do Main, que SEMPRE está inicializado
             Stage stage = Main.getStage();
 
             stage.setScene(scene);

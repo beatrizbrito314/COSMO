@@ -15,20 +15,11 @@ public class HomeController {
         return (Stage) ((Node) event.getSource()).getScene().getWindow();
     }
 
-    // =============== TROCA DE CENA ===============
-
     private void trocarCena(ActionEvent event, String caminhoFXML) {
         try {
             System.out.println("[HomeController] Tentando carregar: " + caminhoFXML);
 
-            // Tentando localizar o arquivo no classpath
             var url = getClass().getResource(caminhoFXML);
-
-            if (url == null) {
-                System.err.println("[ERRO] Arquivo NÃO encontrado: " + caminhoFXML);
-                System.err.println("Verifique se o arquivo está em: src/main/resources" + caminhoFXML);
-                return;
-            }
 
             Parent root = FXMLLoader.load(url);
 
@@ -46,8 +37,6 @@ public class HomeController {
             e.printStackTrace();
         }
     }
-
-    // =============== BOTÕES DO MENU ===============
 
     @FXML
     private void openDisciplina(ActionEvent event) {

@@ -11,25 +11,23 @@
       spacing="35"
       alignment="CENTER_LEFT"
       prefHeight="70"
+      prefWidth="Infinity"
       styleClass="navbar">
 
     <Label text="COSMO" styleClass="nav-logo"/>
 
     <Pane HBox.hgrow="ALWAYS" />
 
-
-    <!--Home-->
     <HBox fx:id="homeBtn" spacing="10" alignment="CENTER" styleClass="nav-item">
         <SVGPath styleClass="nav-icone"
                  content="M10 20V14H14V20H19V12H22L12 3 2 12H5V20Z"/>
         <Label text="Início"/>
     </HBox>
 
-    <!--Universo
-    (talvez eu troque depois o svg desse planeta não sei se gostei muito)-->
-	<HBox fx:id="featuresBtn" spacing="10" alignment="CENTER" styleClass="nav-item">
-    	<SVGPath styleClass="nav-icone"
-         content="
+    <!--Achei esse svg tão feinho vou ver se troco depois-->
+    <HBox fx:id="featuresBtn" spacing="10" alignment="CENTER" styleClass="nav-item">
+        <SVGPath styleClass="nav-icone"
+                 content="
             M12 4
             A8 8 0 1 0 12 20
             A8 8 0 1 0 12 4
@@ -37,17 +35,15 @@
             C4 17 20 17 23 13
             C20 9 4 9 1 13Z
          "/>
-    	<Label text="Universo"/>
-	</HBox>
+        <Label text="Universo"/>
+    </HBox>
 
-    <!--Sobre-->
     <HBox fx:id="aboutBtn" spacing="10" alignment="CENTER" styleClass="nav-item">
         <SVGPath styleClass="nav-icone"
                  content="M12 2A10 10 0 1 0 12 22A10 10 0 1 0 12 2ZM11 10H13V18H11V10ZM11 6H13V8H11V6Z"/>
         <Label text="Sobre"/>
     </HBox>
 
-    <!--Contato-->
     <HBox fx:id="contactBtn" spacing="10" alignment="CENTER" styleClass="nav-item">
         <SVGPath styleClass="nav-icone"
                  content="M21 8V20H3V8L12 13L21 8ZM12 11L3 6H21L12 11Z"/>
@@ -55,5 +51,4 @@
     </HBox>
 
 </HBox>
-
 

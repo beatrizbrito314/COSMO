@@ -3,55 +3,51 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.fxml.FXMLLoader?>
 
 <BorderPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="controller.HomeController"
-            stylesheets="@../style/estilos.css">
+            stylesheets="@../style/estilos.css"
+            styleClass="fundo-uni">
 
-    <!-- Top bar -->
     <top>
-        <HBox spacing="20" alignment="CENTER_LEFT" styleClass="topbar">
-            <children>
-                <Label text="Universo" styleClass="brand" />
-
-                <Button text="Meu universo" onAction="#openDisciplina" />
-                <Button text="Tarefas" onAction="#openTarefas" />
-
-                <!-- Spacer empurra o botão 'Sair' para a direita -->
-                <Region HBox.hgrow="ALWAYS" />
-
-                <Button text="Sair" onAction="#logout" />
-            </children>
-        </HBox>
+        <fx:include source="Navbar.fxml"/>
     </top>
 
-    <!-- Conteúdo central -->
+
     <center>
-        <VBox spacing="20" alignment="TOP_CENTER" BorderPane.alignment="TOP_CENTER">
-            <children>
+        <VBox spacing="35" alignment="CENTER" BorderPane.alignment="CENTER">
+            
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
 
-                <Label text="Dashboard" styleClass="page-title" />
+            <!--Tenho que mexer nessa saudação ainda-->
+            <Label fx:id="saudacaoLabel" text="Olá, Usuário!" styleClass="titulo-pag"/>
+ 
+            <HBox spacing="25" alignment="CENTER">
 
-                <HBox spacing="20">
+                <VBox styleClass="card-grande" spacing="15" alignment="CENTER" fx:id="cardTarefas"
+                      onMouseClicked="#openDisciplina">
                     <children>
-
-                        <VBox styleClass="card" spacing="10">
-                            <children>
-                                <Label text="2 de 3 tarefas concluídas" />
-                            </children>
-                        </VBox>
-
-                        <VBox styleClass="card" spacing="10">
-                            <children>
-                                <Label text="50%" />
-                            </children>
-                        </VBox>
-
+                        <Label text="Tarefas Concluídas" styleClass="titulo-principal"/>
+                        <Label text="2 de 3 tarefas concluídas" styleClass="texto-secundario"/>
+                        <ProgressBar progress="0.66" prefWidth="180"/>
                     </children>
-                </HBox>
+                </VBox>
 
-            </children>
+                <VBox styleClass="card-grande" spacing="15" alignment="CENTER" fx:id="cardProgresso"
+                      onMouseClicked="#openTarefas">
+                    <children>
+                        <Label text="Progresso Geral" styleClass="titulo-principal"/>
+                        <Label text="50%" styleClass="texto-secundario"/>
+                        <ProgressBar progress="0.5" prefWidth="180"/>
+                    </children>
+                </VBox>
+
+            </HBox>
+
         </VBox>
     </center>
 

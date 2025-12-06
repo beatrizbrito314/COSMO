@@ -20,7 +20,6 @@
                     <Insets top="50" right="30" bottom="50" left="30"/>
                 </padding>
 
-                <!--Card principal-->
                 <VBox spacing="22" alignment="TOP_CENTER" prefWidth="750" styleClass="card-galaxy">
 
                     <Label text="✨ Sobre o Cosmo" styleClass="titulo-galaxy"/>
@@ -31,7 +30,6 @@
                            text="O projeto nasceu com a missão de combinar funcionalidade e estética, desenvolvendo ferramentas acessíveis e inteligentes com foco no usuário. Mais do que um simples aplicativo de tarefas, o COSMO foi pensado para trazer ordem e clareza ao seu universo acadêmico, permitindo que você concentre energia no que realmente importa: aprender, produzir e conquistar seus objetivos." />
                 </VBox>
 
-                <!--Card da equipe-->
                 <VBox spacing="22" alignment="TOP_CENTER" prefWidth="750" styleClass="card-galaxy">
 
                     <Label text="👩‍🚀 Nossa tripulação" styleClass="titulo-galaxy"/>
@@ -43,7 +41,6 @@
                            text="Unindo criatividade e tecnologia, buscamos entregar um produto moderno, funcional e esteticamente único." />
                 </VBox>
 
-                <!--Carsd dos mesmbros-->
                 <VBox spacing="15" alignment="TOP_LEFT" prefWidth="750" styleClass="card-galaxy">
 
                     <Label text="🪐 Cargos" styleClass="titulo-galaxy"/>
@@ -60,7 +57,6 @@
     					</VBox>
 				</HBox>
                     
-
                     <!--Astrounauta de Bia-->
                     <HBox spacing="15" alignment="CENTER_LEFT">
                         <ImageView fx:id="fotoBia" fitWidth="80" fitHeight="80" pickOnBounds="true" preserveRatio="true" />

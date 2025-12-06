@@ -33,7 +33,6 @@ public class ListaTarefasController {
                 tarefaService.listarTarefas()
         );
 
-        // Ordena por prioridade (maior primeiro)
         lista.sort((t1, t2) -> Double.compare(t2.getPrioridade(), t1.getPrioridade()));
         tabelaTarefas.setItems(lista);
 
@@ -97,3 +96,4 @@ public class ListaTarefasController {
         Navigation.goTo("/view/CadastroTarefa.fxml");
     }
 }
+

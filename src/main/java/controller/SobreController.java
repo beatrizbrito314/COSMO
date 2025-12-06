@@ -6,7 +6,6 @@ import javafx.scene.image.ImageView;
 
 public class SobreController {
 
-    // ImageViews da equipe
     @FXML
     private ImageView fotoSarah;
 
@@ -25,5 +24,3 @@ public class SobreController {
         }
     }
 }
-
-
