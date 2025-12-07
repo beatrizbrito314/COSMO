@@ -13,7 +13,7 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
   Cada usuário visualiza seu próprio progresso após autenticação.  
 
 - **Dashboard Interativo**  
-  - Cards com **tarefas concluídas** e **progresso geral**   
+  Cards com **tarefas concluídas** e **progresso geral**   
 
 - **Gestão de Tarefas**  
   Visualização de tarefas agrupadas por disciplina.  
@@ -29,13 +29,13 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
 ## 🎨 Aparência
 
 **Tela de Criar conta**  
-![Register Screen](images/Register Screen.png)
+![Register Screen](images/RegisterScreen.png)
 
 **Home**  
-![Home Screen](images/Home Screen.png)
+![Home Screen](images/HomeScreen.png)
 
 **Tela de informações sobre o projeto**  
-![About Screen](images/About Screen.png)  
+![About Screen](images/AboutScreen.png)  
 
 ---
 
