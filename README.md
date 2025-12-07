@@ -1,7 +1,12 @@
 # Cosmo ​🌠​
 
-![Cosmo Banner](images/banner.png)  
-*Bem-vindo ao Cosmo, o seu universo de tarefas e progresso acadêmico!*
+<p align="center">
+  <img src="images/banner.png" alt="Cosmo Banner">
+</p>
+
+<p align="center">
+  <em>Bem-vindo ao Cosmo, o seu universo de tarefas e progresso acadêmico!</em>
+</p>
 
 O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento de tarefas e acompanhamento de progresso universitário. Com uma interface inspirada no universo e navegação simplificada,  o Cosmo transforma o acompanhamento de tarefas em uma experiência agradável e visualmente imersiva.  
 
@@ -13,7 +18,7 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
   Cada usuário visualiza seu próprio progresso após autenticação.  
 
 - **Dashboard Interativo**  
-  - Cards com **tarefas concluídas** e **progresso geral**   
+  Cards com **tarefas concluídas** e **progresso geral**   
 
 - **Gestão de Tarefas**  
   Visualização de tarefas agrupadas por disciplina.  
@@ -29,13 +34,13 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
 ## 🎨 Aparência
 
 **Tela de Criar conta**  
-![Register Screen](images/Register Screen.png)
+![Register Screen](images/RegisterScreen.png)
 
 **Home**  
-![Home Screen](images/Home Screen.png)
+![Home Screen](images/HomeScreen.png)
 
 **Tela de informações sobre o projeto**  
-![About Screen](images/About Screen.png)  
+![About Screen](images/AboutScreen.png)  
 
 ---
 
@@ -54,7 +59,7 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
 <table>
   <tr>
     <td align="center">
-      <a href="https://github.com/heyitssarah">
+      <a href="https://github.com/sarahiaa">
         <img src="https://github.com/sarahiaa.png" width="100px;" alt="Sarah Lima"/>
         <br />
         <sub><b>Sarah Lima</b></sub>
