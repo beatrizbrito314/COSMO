@@ -29,13 +29,13 @@ O Cosmo é um sistema interativo desenvolvido em **JavaFX** para gerenciamento d
 ## 🎨 Aparência
 
 **Tela de Criar conta**  
-![Register Screen](./images/register.png)
+![Register Screen](images/Register Screen.png)
 
 **Home**  
-![Home Screen](./images/home.png)
+![Home Screen](images/Home Screen.png)
 
 **Tela de informações sobre o projeto**  
-![About Screen](./images/about.png)  
+![About Screen](images/About Screen.png)  
 
 ---
 
