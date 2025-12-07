@@ -38,11 +38,11 @@
                           styleClass="lista-cosmo"
                           VBox.vgrow="NEVER"/>
 
-                <Button text="Cadastrar Nova Disciplina"
+                <Button text="Cadastrar nova disciplina"
                         onAction="#irParaCadastro"
                         styleClass="botao-roxo"/>
 
-                <Button text="Voltar à Home"
+                <Button text="Voltar para Home"
                         onAction="#voltarHome"
                         styleClass="botao-roxo"/>
 

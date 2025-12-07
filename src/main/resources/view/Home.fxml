@@ -26,7 +26,7 @@
 
             <HBox spacing="25" alignment="CENTER">
 
-                <VBox fx:id="cardTarefas" styleClass="card-grande" spacing="15" alignment="CENTER">
+                <VBox fx:id="cardTarefas" styleClass="card-home" spacing="15" alignment="CENTER">
                     <children>
                         <Label text="Tarefas Concluídas" styleClass="titulo-pag"/>
                         <Label text="2 de 3 tarefas concluídas" styleClass="texto-secundario"/>
@@ -34,7 +34,7 @@
                     </children>
                 </VBox>
 
-                <VBox fx:id="cardProgresso" styleClass="card-grande" spacing="15" alignment="CENTER">
+                <VBox fx:id="cardProgresso" styleClass="card-home" spacing="15" alignment="CENTER">
                     <children>
                         <Label text="Progresso Geral" styleClass="titulo-pag"/>
                         <Label text="50%" styleClass="texto-secundario"/>
@@ -42,6 +42,11 @@
                     </children>
                 </VBox>
 
+            </HBox>
+
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Ir para disciplinas" onAction="#openDisciplina" styleClass="botao-roxo"/>
+                <Button text="Criar tarefa" onAction="#openTarefas" styleClass="botao-roxo"/>
             </HBox>
 
         </VBox>
